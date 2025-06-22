@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -11,8 +12,8 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(cors());
 
-/* Chaîne de connexion MongoDB */
-const MONGOURL = "mongodb+srv://shernoori24:shernoori241@cluster0.ka7oecr.mongodb.net/task_app?retryWrites=true&w=majority&appName=Cluster0";
+/* Chaîne de connexion MongoDB depuis la variable d'environnement */
+const MONGOURL = process.env.MONGOURL;
 
 /* Connexion à MongoDB */
 mongoose.connect(MONGOURL)

@@ -31,7 +31,11 @@ Ce projet est une application mobile de gestion de tâches avec un backend Node.
    ```
    npm install
    ```
-3. Lancer le serveur backend :
+3. Créer un fichier `.env` dans le dossier `api` avec la variable d'environnement suivante :
+   ```
+   MONGOURL="votre_chaine_de_connexion_mongodb"
+   ```
+4. Lancer le serveur backend :
    ```
    node index.js
    ```
@@ -57,7 +61,7 @@ Ce projet est une application mobile de gestion de tâches avec un backend Node.
 
 - Assurez-vous que votre téléphone et votre machine de développement sont connectés au même réseau.
 - L'URL de l'API dans le frontend est configurée avec l'adresse IP locale de la machine de développement.
-- La chaîne de connexion MongoDB est configurée dans `api/index.js`.
+- La chaîne de connexion MongoDB est maintenant configurée via la variable d'environnement dans le fichier `.env` du dossier `api`.
 
 ## Licence
 
